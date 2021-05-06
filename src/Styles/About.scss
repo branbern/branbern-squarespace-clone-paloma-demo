@@ -1,0 +1,37 @@
+.about {
+    width: 80%;
+    margin: auto;
+
+    .about-intro {
+        width: 50%;
+        margin-bottom: 100px;
+
+        h3 {
+            font-family: orpheuspro, serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: calc(2.2 * 1rem);
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 2em;
+            font-weight: 500;
+        }
+    }
+   
+    .col {
+        font-weight: 500;
+    }
+    .row {
+        width: 53%;
+        margin-bottom: 5px;
+    }
+    .bold {
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+}
+
