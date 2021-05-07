@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Main from './Pages/Main'
 import About from './Pages/About'
 import Episodes from './Pages/Episodes'
-import Blogs from './Pages/Blogs'
+import Blog from './Pages/Blog'
 import Contact from './Pages/Contact'
 
 import Info from './Comps/Info';
@@ -19,7 +19,7 @@ const App = () => {
         <Route path="/" exact component={Main} />
         <Route path="/about" exact component={About} />
         <Route path="/episodes" exact component={Episodes} />
-        <Route path="/blogs" exact component={Blogs} />
+        <Route path="/blogs" exact component={Blog} />
         <Route path="/contact" exact component={Contact} />
       </Switch>
       <Info />
