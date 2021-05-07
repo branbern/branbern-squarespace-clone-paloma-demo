@@ -1,8 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import Work from './Pages/Work/Work';
-import Contact from './Pages/Contact/Contact';
-import About from './Pages/About/About';
+
+import Main from './Pages/Main'
+import About from './Pages/About'
+import Episodes from './Pages/Episodes'
+import Blogs from './Pages/Blogs'
+import Contact from './Pages/Contact'
+
 import Info from './Comps/Info';
 import Nav from './Comps/Nav';
 import './Styles/App.css';
@@ -12,8 +16,10 @@ const App = () => {
     <Router>
       <Nav />
       <Switch>
-        <Route path="/" exact component={Work} /> 
+        <Route path="/" exact component={Main} />
         <Route path="/about" exact component={About} />
+        <Route path="/episodes" exact component={Episodes} />
+        <Route path="/blogs" exact component={Blogs} />
         <Route path="/contact" exact component={Contact} />
       </Switch>
       <Info />
