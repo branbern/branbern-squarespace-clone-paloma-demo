@@ -1,0 +1,42 @@
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-family: adobe-garamond-pro;
+
+
+    .project-image {
+        width: 100%;
+        
+        img {
+            max-width: 100%;
+            height: 260px;
+            width: 100%;
+            object-fit: cover;
+            padding: 10px;
+        }
+    }
+
+    .project-date {
+        opacity: .7;
+        margin: 0;
+        font-size: 13px;
+        line-height: 1.4em;
+        text-transform: none;
+        padding: 10px 0;
+    }
+
+    .project-title {
+        font-size: calc(1.5 * 1rem);
+        padding: 0px;
+        font-weight: 400;
+    }
+
+    .project-text {
+        font-size: 14px;
+        line-height: 1.4em;
+        margin: 0 0 10px 0;
+        text-align: center;
+    }
+}
