@@ -1,7 +1,36 @@
 .slide {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    .slide-controls {
+        width: 100%;
+        text-align: right;
+        
+        .fa-chevron-left {
+            padding-right: 10px;
+        }
+
+        .active {
+            color: grey;
+            opacity: .7;
+        }
+        .not-active {
+            color: black;
+            opacity: 1;
+            cursor: pointer;
+        }
+   
+    }
+
+    .slide-projects {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        justify-content: center;
+        align-items: center;
+    }
+
+
 }
