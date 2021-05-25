@@ -1,0 +1,10 @@
+.episodes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto;
+    padding-top: 225px;
+    width: 60%;
+}

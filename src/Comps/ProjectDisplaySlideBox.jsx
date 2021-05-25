@@ -9,7 +9,7 @@ const ProjectDisplaySlideBox = ({project}) =>  {
             <div className='project-image'> 
                 <img src={project.Image}/>
             </div>
-            <span className='project-date'>{project.Date}</span>
+            <span className='project-date'>{project.DateNormal}</span>
             <h1 className='project-title'>{project.Title}</h1>
             <p className='project-text'>{project.Text}</p>
         </div>

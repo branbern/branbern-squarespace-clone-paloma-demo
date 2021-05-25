@@ -7,6 +7,29 @@ const Nav = () => {
     const location = useLocation();
     const [active, setActive] = useState(location.pathname);
 
+    let links = 'links-black link';
+
+
+    switch(active) {
+        case '/':
+            links = 'links-white link active'
+            break;
+        case '/about':
+            links = 'links-black link active' 
+            break;
+        case '/episodes':
+            links = 'links-black link active'
+            break;
+        case '/blog':
+            links = 'links-black link active'
+            break;
+        case '/contact':
+            links = 'links-white link active'
+            break;
+
+        default: break;
+    }
+   
     return (
         <div className='nav-wrapper'>
             <nav className="navbar navbar-expand-lg navbar-light nav">
@@ -17,14 +40,14 @@ const Nav = () => {
 
                 <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
                 <ul className="navbar-nav">
-                    <li className={active === '/about' ? 'nav-link active': 'nav-link'} onClick={() => setActive('/about')}><Link to="/about">About</Link></li>
-                    <li className={active === '/episodes' ? 'nav-link active': 'nav-link'} onClick={() => setActive('/episodes')}><Link to="/episodes">Episodes</Link></li>
-                    <li className={active === '/blog' ? 'nav-link active': 'nav-link'} onClick={() => setActive('/blog')}><Link to="/blog">Blog</Link></li>
-                    <li className={active === '/contact' ? 'nav-link active': 'nav-link'} onClick={() => setActive('/contact')}><Link to="/contact">Contact</Link></li>
-                    <li className='nav-link' onClick={() => setActive('/')}><Link to="/"><i className="fab fa-instagram"></i></Link></li>
-                    <li className='nav-link' onClick={() => setActive('/')}><Link to="/"><i className="fab fa-youtube"></i></Link></li>
-                    <li className='nav-link' onClick={() => setActive('/')}><Link to="/"><i className="fab fa-facebook"></i></Link></li>
-                    <div className='donate'>Donate</div>
+                    <li className={links} onClick={() => setActive('/about')}><Link to="/about">About</Link></li>
+                    <li className={links} onClick={() => setActive('/episodes')}><Link to="/episodes">Episodes</Link></li>
+                    <li className={links} onClick={() => setActive('/blog')}><Link to="/blog">Blog</Link></li>
+                    <li className={links} onClick={() => setActive('/contact')}><Link to="/contact">Contact</Link></li>
+                    <li className={links} onClick={() => setActive('/')}><Link to="/"><i className="fab fa-instagram"></i></Link></li>
+                    <li className={links} onClick={() => setActive('/')}><Link to="/"><i className="fab fa-youtube"></i></Link></li>
+                    <li className={links} onClick={() => setActive('/')}><Link to="/"><i className="fab fa-facebook"></i></Link></li>
+                    <div className={links} >Donate</div>
                 </ul>
                 </div>
             </nav>

@@ -24,19 +24,25 @@
         font-size: 20px;
         justify-content: flex-end;
 
-
-        .donate {
-            padding: 10px 20px;
-            margin-left: 10px;
-            font-size: 1rem;
-            color: white;
-            background-color: #C79288;
+        a {
+            text-decoration: none;
         }
 
-        .active{
+
+        .links-white a{
+            color: white;
+        }
+        .links-white-active {
+            border-bottom: 1px solid white;
+        }
+        .links-black a{
+            color: black;
+        }
+        .links-black-active {
             border-bottom: 1px solid black;
         }
-        .nav-link {
+        
+        .link {
             padding: 0px 5px !important;
             margin: 10px;
 
@@ -44,14 +50,13 @@
                 font-size: 30px;
                 margin-right: 20px;
             }
+        }
         
-            a {
-                color: white;
-            }
-            
-            a:hover {
-                text-decoration: none;
-            }
+
+        .donate {
+            padding: 10px 20px;
+            margin-left: 10px;
+            font-size: 1rem;
         }
     }
 }

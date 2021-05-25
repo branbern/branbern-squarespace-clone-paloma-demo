@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import ProjectDisplaySlideBox from './ProjectDisplaySlideBox'
 import '../Styles/Slide.scss'
 
+// TODO: I still need to implement the slide animation!
+
 const Slide = ({data}) =>  {
     const [episodes, setEpisodes] = useState(data.slice(3, 6).reverse());
     const [Shift, setShift] = useState(false);

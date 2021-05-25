@@ -1,10 +1,16 @@
 import React from 'react'
+import ProjectDisplay from '../Comps/ProjectDisplay'
 import '../Styles/Episodes.scss';
 
-const Episodes = () =>  {
+const Episodes = ({episodes}) =>  {
+
     return (
         <div className='episodes'>
-            Episodes
+
+            {episodes.reverse().map((episode) => {
+                return <ProjectDisplay project={episode}/>
+            })}
+
         </div>)
 }
 
