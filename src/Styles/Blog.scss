@@ -1,0 +1,49 @@
+.blog {
+    display: flex;
+    flex-direction: column;
+    padding-top: 225px;
+    width: 60%;
+    margin: auto;
+
+    .blog-box {
+        text-align: center;
+        margin-bottom: 40px;
+
+        .blog-date {
+            font-family: Poppins;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: .01em;
+        text-transform: none;
+        line-height: 1em;
+        }
+
+        .blog-title {
+            font-family: Cormorant Garamond;
+            font-weight: 500;
+            font-style: normal;
+            letter-spacing: 0em;
+            text-transform: none;
+            line-height: 1.4em;
+            font-size: calc(4 * 1rem);
+        }
+
+        .blog-enter {
+            color: #C79288;
+            border-bottom: 1px solid #C79288;
+            margin-left: 10px;
+            width: 8%;
+            margin: auto;
+            margin-bottom: 160px;
+            font-size: calc(1.2 * 1rem);
+            font-family: adobe-garamond-pro;
+            font-weight: 300;
+            font-style: normal;
+            letter-spacing: 0em;
+            text-transform: none;
+            line-height: 1.8em;
+        }
+    }
+
+  
+}

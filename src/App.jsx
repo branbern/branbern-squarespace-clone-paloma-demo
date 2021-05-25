@@ -58,6 +58,14 @@ const App = () => {
         Text: 'Sometimes the most relaxing place to travel is nowhere at all.', 
         Image: 'https://images.squarespace-cdn.com/content/v1/5cee9df5880cbc000150d93b/1559324341545-PCCBGVTY69CSNVWIP1BI/ke17ZwdGBToddI8pDm48kNu93_l1Rc0JoXikXAEKHf17gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QHyNOqBUUEtDDsRWrJLTmDJyaVitQ06bkWUY0OMxkmN-bdz7wg8la12Me-ub45vBE5029s6uMXtkNCzVgxK8m/_21-copy.jpg?format=500w'}]
 
+    const blogs = [
+      { Date: '8/14/19',Title: 'Backpacking through Europe'},
+      { Date: '8/14/19',Title: 'Big City vs. Small Town' },
+      { Date: '3/11/19',Title: 'Music & Mood'},
+      { Date: '8/11/19',Title: 'My Morning Routine'},
+      { Date: '8/11/19',Title: 'Productive Habits'},
+      { Date: '8/11/19',Title: 'Top 10 Places to Visit'},
+    ]
   return (
     <Router>
       <Nav data={episodes}/>
@@ -69,7 +77,9 @@ const App = () => {
         <Route path="/episodes" exact render={() => (
                                       <Episodes episodes={episodes} />
                                     )}/>
-        <Route path="/blogs" exact component={Blog} />
+        <Route path="/blog" exact render={() => (
+                                      <Blog blogs={blogs} />
+                                    )}/>
         <Route path="/contact" exact component={Contact} />
       </Switch>
       <Info />
