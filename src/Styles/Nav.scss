@@ -24,6 +24,15 @@
         font-size: 20px;
         justify-content: flex-end;
 
+
+        .active-black {
+            border-bottom: 1px solid black;
+        }
+
+        .active-white {
+            border-bottom: 1px solid white;
+        }
+
         a {
             text-decoration: none;
         }
@@ -45,14 +54,9 @@
         .links-white a{
             color: white;
         }
-        .links-white-active {
-            border-bottom: 1px solid white;
-        }
+  
         .links-black a{
             color: black;
-        }
-        .links-black-active {
-            border-bottom: 1px solid black;
         }
         
         .link {

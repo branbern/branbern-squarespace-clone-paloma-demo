@@ -9,28 +9,28 @@ const Nav = () => {
 
     let links = 'links-black link';
     let donateLink = 'white-donate';
+    let underlineColor = 'active-black';
 
 
     switch(active) {
         case '/':
-            links = 'links-white link active'
+            links = 'links-white link'
             donateLink = 'colored-donate'
             break;
         case '/about':
-            links = 'links-black link active' 
-            donateLink = 'white-donate'
+            links = 'links-white link' 
+            underlineColor = 'active-white';
             break;
         case '/episodes':
-            links = 'links-black link active'
             donateLink = 'colored-donate';
             break;
         case '/blog':
-            links = 'links-black link active'
             donateLink = 'colored-donate'
             break;
         case '/contact':
-            links = 'links-white link active'
-            donateLink = 'white-donate';
+            links = 'links-white link'
+            underlineColor = 'active-white';
+
             break;
 
         default: break;
@@ -46,10 +46,10 @@ const Nav = () => {
 
                 <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
                 <ul className="navbar-nav">
-                    <li className={links} onClick={() => setActive('/about')}><Link to="/about">About</Link></li>
-                    <li className={links} onClick={() => setActive('/episodes')}><Link to="/episodes">Episodes</Link></li>
-                    <li className={links} onClick={() => setActive('/blog')}><Link to="/blog">Blog</Link></li>
-                    <li className={links} onClick={() => setActive('/contact')}><Link to="/contact">Contact</Link></li>
+                    <li className={active === '/about' ? `${links} ${underlineColor}` : links} ><Link to="/about" onClick={() => setActive('/about')}>About</Link></li>
+                    <li className={active === '/episodes' ? `${links} ${underlineColor}` : links} ><Link to="/episodes" onClick={() => setActive('/episodes')}>Episodes</Link></li>
+                    <li className={active === '/blog' ? `${links} ${underlineColor}` : links} ><Link to="/blog" onClick={() => setActive('/blog')}>Blog</Link></li>
+                    <li className={active === '/contact' ? `${links} ${underlineColor}` : links} ><Link to="/contact" onClick={() => setActive('/contact')}>Contact</Link></li>
                     <li className={links} onClick={() => setActive('/')}><Link to="/"><i className="fab fa-instagram"></i></Link></li>
                     <li className={links} onClick={() => setActive('/')}><Link to="/"><i className="fab fa-youtube"></i></Link></li>
                     <li className={links} onClick={() => setActive('/')}><Link to="/"><i className="fab fa-facebook"></i></Link></li>
