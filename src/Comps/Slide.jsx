@@ -22,7 +22,13 @@ const Slide = ({data}) =>  {
     console.log(episodes)
     return (
         <div className='slide'>
-            <div className='slide-controls'><i className={Shift ? "not-active fas fa-chevron-left" : 'active fas fa-chevron-left'} onClick={() => ShiftSlide('left')}></i><i class={Shift ? "active fas fa-chevron-right" : 'not-active fas fa-chevron-right'} onClick={() => ShiftSlide('right')}></i></div>
+            <div className='slide-controls'>
+                <i className={Shift ? "not-active fas fa-chevron-left" : 'active fas fa-chevron-left'} 
+                onClick={() => ShiftSlide('left')}>
+                </i>
+                <i class={Shift ? "active fas fa-chevron-right" : 'not-active fas fa-chevron-right'} 
+                onClick={() => ShiftSlide('right')}></i>
+            </div>
             <div className='slide-projects'>
                 {episodes.map((episode, i) => {
                     return <ProjectDisplaySlideBox project={episode} key={i}/>

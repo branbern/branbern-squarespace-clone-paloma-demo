@@ -8,23 +8,29 @@ const Nav = () => {
     const [active, setActive] = useState(location.pathname);
 
     let links = 'links-black link';
+    let donateLink = 'white-donate';
 
 
     switch(active) {
         case '/':
             links = 'links-white link active'
+            donateLink = 'colored-donate'
             break;
         case '/about':
             links = 'links-black link active' 
+            donateLink = 'white-donate'
             break;
         case '/episodes':
             links = 'links-black link active'
+            donateLink = 'colored-donate';
             break;
         case '/blog':
             links = 'links-black link active'
+            donateLink = 'colored-donate'
             break;
         case '/contact':
             links = 'links-white link active'
+            donateLink = 'white-donate';
             break;
 
         default: break;
@@ -47,7 +53,7 @@ const Nav = () => {
                     <li className={links} onClick={() => setActive('/')}><Link to="/"><i className="fab fa-instagram"></i></Link></li>
                     <li className={links} onClick={() => setActive('/')}><Link to="/"><i className="fab fa-youtube"></i></Link></li>
                     <li className={links} onClick={() => setActive('/')}><Link to="/"><i className="fab fa-facebook"></i></Link></li>
-                    <div className={links} >Donate</div>
+                    <div className={donateLink} >Donate</div>
                 </ul>
                 </div>
             </nav>
